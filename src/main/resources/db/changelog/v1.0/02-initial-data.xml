@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd">
+
+    <changeSet id="02-insert-test-wallet" author="yakov" context="dev,test">
+        <insert tableName="wallets">
+            <column name="id" value="550e8400-e29b-41d4-a716-446655440000"/>
+            <column name="balance" valueNumeric="0.00"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+
+        <insert tableName="wallets">
+            <column name="id" value="550e8400-e29b-41d4-a716-446655440001"/>
+            <column name="balance" valueNumeric="1000.00"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
